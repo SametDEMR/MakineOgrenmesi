@@ -37,10 +37,6 @@ def user_input_features():
 
 input_df = user_input_features()
 
-# Kullanıcı girdilerini gösterme
-st.subheader("Girdi Özellikleri")
-st.write(input_df)
-
 # Tahmin yapma
 if st.button("Tahmini Hesapla"):
     try:
