@@ -7,7 +7,7 @@ import joblib
 st.title("Cam Fiyat Tahmin Uygulaması")
 
 # Eğitimli modeli yükleme
-model_filename = 'eniyi_cam_model.joblib'
+model_filename = 'eniyi.joblib'
 try:
     model = joblib.load(model_filename)
     st.success("Model başarıyla yüklendi.")
