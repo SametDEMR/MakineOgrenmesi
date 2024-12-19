@@ -16,16 +16,15 @@ except FileNotFoundError:
     st.stop()
 
 # Kullanıcı girdileri
-st.sidebar.header("Cam Özelliklerini Girin")
-
 def user_input_features():
-    cam_markasi = st.sidebar.selectbox("Cam Markası", ['Marka A', 'Marka B', 'Marka C'])
-    inceltilme_miktari = st.sidebar.slider("İnceltilme Miktarı (mm)", 1.0, 5.0, 2.5)
-    ek_ozellikler = st.sidebar.selectbox("Ek Özellikler", ['Yok', 'UV Filtre', 'Anti-Refle'])
-    cam_kasko_suresi = st.sidebar.slider("Cam Kasko Süresi (yıl)", 1, 5, 2)
-    cerceve_markasi = st.sidebar.selectbox("Çerçeve Markası", ['Marka X', 'Marka Y', 'Marka Z'])
-    cerceve_tipi = st.sidebar.selectbox("Çerçeve Tipi", ['Metal', 'Plastik', 'Titanyum'])
-    
+    st.header("Cam Özelliklerini Girin")
+    cam_markasi = st.selectbox("Cam Markası", ['Marka A', 'Marka B', 'Marka C'])
+    inceltilme_miktari = st.slider("İnceltilme Miktarı (mm)", 1.0, 5.0, 2.5)
+    ek_ozellikler = st.selectbox("Ek Özellikler", ['Yok', 'UV Filtre', 'Anti-Refle'])
+    cam_kasko_suresi = st.slider("Cam Kasko Süresi (yıl)", 1, 5, 2)
+    cerceve_markasi = st.selectbox("Çerçeve Markası", ['Marka X', 'Marka Y', 'Marka Z'])
+    cerceve_tipi = st.selectbox("Çerçeve Tipi", ['Metal', 'Plastik', 'Titanyum'])
+
     data = {
         'Cam Markası': cam_markasi,
         'İnceltilme Miktarı (mm)': inceltilme_miktari,
